@@ -1,0 +1,12 @@
+{
+    "data": [
+        {"id": "123", "nombre": "Pizza", "descripcion": "Con queso y jamón", "precio": "56.99"},
+        {"id": "23424", "nombre": "Hamburguesa", "descripcion": "Con queso y carne", "precio": "65.50"},
+        {"id": "121231233", "nombre": "Hamburguesa", "descripcion": "Con queso y carne", "precio": "65.50"},
+        {"id": "121313", "nombre": "Hamburguesa", "descripcion": "Con queso y carne", "precio": "65.50"},
+        {"id": "155423", "nombre": "Hamburguesa", "descripcion": "Con queso y carne", "precio": "65.50"},
+        {"id": "12323", "nombre": "Hamburguesa", "descripcion": "Con queso y carne", "precio": "65.50"},
+        {"id": "122123", "nombre": "Hamburguesa", "descripcion": "Con queso y carne", "precio": "65.50"},
+        {"id": "124453", "nombre": "Hamburguesa", "descripcion": "Con queso y carne", "precio": "65.50"}
+    ]
+}
