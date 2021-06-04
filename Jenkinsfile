@@ -8,6 +8,20 @@ pipeline {
                 }
             }
         }
+        stage("test"){
+            steps{
+                script {
+                    ipconfig
+                }
+            }
+        }
+        stage("deploy"){
+            steps{
+                script {
+                    echo "Hola Mundo"
+                }
+            }
+        }
     }
     post {
         always {
