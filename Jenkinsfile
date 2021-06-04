@@ -3,14 +3,16 @@ pipeline {
     stages {
         stage("build"){
             steps{
-                script {
-                    echo "Hola Mundo"
-                }
+                bat "cd FRONTEND"
+                bat "docker build -t 'practica1:Dockerfile' ."
+                bat "cd .."
             }
         }
         stage("test"){
             steps{
-                bat "dir /a /b"
+                bat "cd PRUEBAS"
+                bat "npm install"
+                bat "npm test"
             }
         }
         stage("deploy"){
