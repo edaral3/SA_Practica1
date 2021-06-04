@@ -6,6 +6,7 @@ pipeline {
                 bat """
                     cd FRONTEND
                     dir
+                    docker build -t \"sapractica1:latest\" .
                     cd ..
                 """
             }
