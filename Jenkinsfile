@@ -4,7 +4,7 @@ pipeline {
         stage("build"){
             steps{
                 bat """
-                    cd .\FRONTEND\
+                    cd .\\FRONTEND\\
                     dir
                     bat "docker build -t \"sapractica1:latest\" ."
                 """
