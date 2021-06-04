@@ -1,11 +1,11 @@
-pipeline {
-    agent any
-    stages {
-        stage("build"){
-            steps{
+pipeline { //En este apartado se definen las instrucciones del pipeline
+    agent any //Permite que cualquier agente pueda ejecutar el pipeline
+    stages {  //Permite agregar los jobs que se ejecutaran el en pipeline
+        stage("build"){ //Job a ejecutar en le cual se puede definir el nombre que tendra el job
+            steps{ //En este apartado se definen los comandos que se ejecutaran al ejecurtarse el job
                 bat """
                     cd FRONTEND
-                    docker build -t \"sapractica1:latest\" .
+                    docker build -t \"sapractica1:latest\" .    
                     cd ..
                 """
             }
@@ -30,15 +30,15 @@ pipeline {
             }
         }
     }
-    post {
-        always {
+    post { //
+        always { //Este es un job que siempre se ejecuta al finalizar el pipeline
             deleteDir()
             echo "fase always"
         }
-        success {
+        success { //Se ejecuta al momento que el pipeline finaliza de forma correcta 
             echo "fase success"
         }
-        failure {
+        failure { //Se ejecuta si el pipeline falla en algun job
             echo "fase fairule"
         }
     }
