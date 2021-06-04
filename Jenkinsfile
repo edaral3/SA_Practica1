@@ -4,7 +4,7 @@ pipeline {
         stage("build"){
             steps{
                 script {
-                    sh "echo 'Hola Mundo'"
+                    echo "Hola Mundo"
                 }
             }
         }
@@ -12,13 +12,13 @@ pipeline {
     post {
         always {
             deleteDir()
-            sh "echo 'fase always'"
+            echo "fase always"
         }
         success {
-            sh "echo 'fase success'"
+            echo "fase success"
         }
         failure {
-            sh "echo 'fase fairule'"
+            echo "fase fairule"
         }
     }
 }
