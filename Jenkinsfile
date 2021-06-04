@@ -38,7 +38,7 @@ pipeline { //En este apartado se definen las instrucciones del pipeline
         success { //Se ejecuta al momento que el pipeline finaliza de forma correcta 
             echo "fase success"
         }
-        failure { //Se ejecuta si el pipeline falla en algun job 
+        failure { //Se ejecuta si el pipeline falla en algun job  
             echo "fase fairule"
         }
     }
