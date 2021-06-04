@@ -5,7 +5,6 @@ pipeline {
             steps{
                 bat """
                     cd FRONTEND
-                    dir
                     docker build -t \"sapractica1:latest\" .
                     cd ..
                 """
@@ -20,6 +19,7 @@ pipeline {
                     npm test
                     cd ..
                 """
+                bat "npm test"
             }
         }
         stage("deploy"){
