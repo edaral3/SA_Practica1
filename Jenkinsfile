@@ -9,7 +9,7 @@ pipeline {
         appName = "variable"
     }
     stages {
-        stage("Build"){
+        stage("build"){
             steps{
                 script {
                     sh "ipconfig"
