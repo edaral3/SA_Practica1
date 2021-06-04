@@ -4,7 +4,7 @@ pipeline {
         stage("build"){
             steps{
                 bat "cd FRONTEND"
-                bat "docker build -t 'practica1:Dockerfile' ."
+                bat "docker build -t 'sapractica1:Dockerfile' ."
                 bat "cd .."
             }
         }
