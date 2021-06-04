@@ -4,7 +4,7 @@ pipeline {
         stage("build"){
             steps{
                 script {
-                    sh "ipconfig"
+                    sh "echo 'Hola Mundo'"
                 }
             }
         }
