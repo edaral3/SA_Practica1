@@ -16,7 +16,10 @@ pipeline {
                     cd PRUEBAS
                     npm install
                 """
-                bat "npm test"
+                bat """
+                    cd PRUEBAS
+                    npm test
+                """
             }
         }
         stage("deploy"){
