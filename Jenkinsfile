@@ -4,7 +4,7 @@ pipeline {
         stage("build"){
             steps{
                 bat "cd FRONTEND"
-                bat "docker build -t 'sapractica1:Dockerfile' ."
+                bat "docker build -t \"sapractica1:latest\" ."
                 bat "cd .."
             }
         }
@@ -17,9 +17,7 @@ pipeline {
         }
         stage("deploy"){
             steps{
-                script {
-                    echo "Hola Mundo"
-                }
+                bat "docker run -d -p 3000:3000 --name sapractica1 -it sapractica1:latest"
             }
         }
     }
