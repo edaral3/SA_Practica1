@@ -4,12 +4,11 @@ pipeline {
         stage("build"){
             steps{
                 bat """
-                    cd .\\FRONTEND\\
+                    cd FRONTEND
                     dir
-                    bat "docker build -t \"sapractica1:latest\" ."
+                    docker build -t \"sapractica1:latest\" .
+                    cd ..
                 """
-                bat "docker build -t \"sapractica1:latest\" ."
-                bat "cd .."
             }
         }
         stage("test"){
