@@ -10,9 +10,9 @@ pipeline {
         }
         stage("test"){
             steps{
-                script {
+                bat """
                     dir
-                }
+                """
             }
         }
         stage("deploy"){
