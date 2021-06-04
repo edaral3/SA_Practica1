@@ -1,8 +1,5 @@
 pipeline {
     agent any
-    enviroment {
-        appName = "variable"
-    }
     stages {
         stage("build"){
             steps{
