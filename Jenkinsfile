@@ -11,7 +11,7 @@ pipeline {
         stage("test"){
             steps{
                 script {
-                    ipconfig
+                    dir
                 }
             }
         }
