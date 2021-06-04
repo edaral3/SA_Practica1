@@ -24,6 +24,8 @@ pipeline {
         }
         stage("deploy"){
             steps{
+                bat "docker stop sapractica1"
+                bat "docker rm sapractica1"
                 bat "docker run -d -p 3000:3000 --name sapractica1 -it sapractica1:latest"
             }
         }
