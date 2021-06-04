@@ -18,6 +18,7 @@ pipeline {
                     dir
                     npm install
                     npm test
+                    cd ..
                 """
             }
         }
