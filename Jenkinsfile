@@ -3,7 +3,11 @@ pipeline {
     stages {
         stage("build"){
             steps{
-                bat "cd FRONTEND"
+                bat """
+                    cd FRONTEND
+                    dir
+                    bat "docker build -t \"sapractica1:latest\" ."
+                """
                 bat "docker build -t \"sapractica1:latest\" ."
                 bat "cd .."
             }
