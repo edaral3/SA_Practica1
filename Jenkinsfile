@@ -15,9 +15,6 @@ pipeline {
                 bat """
                     cd PRUEBAS
                     npm install
-                    dir
-                    npm test
-                    cd ..
                 """
                 bat "npm test"
             }
