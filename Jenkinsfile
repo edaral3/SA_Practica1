@@ -4,9 +4,8 @@ pipeline { //En este apartado se definen las instrucciones del pipeline
         stage("build"){ //Job a ejecutar en le cual se puede definir el nombre que tendra el job
             steps{ //En este apartado se definen los comandos que se ejecutaran al ejecurtarse el job
                 bat """
-                    docker-compose build
+                    sudo docker-compose build
                     cd FRONTEND
-                    docker build -t \"sapractica2:latest\" . 
                     sudo docker login -u edaral3 -p 123456789
                     sudo docker tag sapractica2 edaral3/sapractica2:latest
                     sudo docker push edaral3/sapractica2:latest
