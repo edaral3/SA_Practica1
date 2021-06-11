@@ -8,7 +8,6 @@ pipeline { //En este apartado se definen las instrucciones del pipeline
                     cd FRONTEND
                     docker build -t \"sapractica2:latest\" . 
                     sudo docker login -u edaral3 -p 123456789
-                    sudo docker login -u edaral3 -p 123456789
                     sudo docker tag sapractica2 edaral3/sapractica2:latest
                     sudo docker push edaral3/sapractica2:latest
                     cd .. 
