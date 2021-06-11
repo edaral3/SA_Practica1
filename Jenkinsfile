@@ -9,7 +9,7 @@ pipeline { //En este apartado se definen las instrucciones del pipeline
                     sudo docker login -u edaral3 -p 123456789
                     sudo docker tag sapractica2 sapractica2:latest
                     sudo docker push sapractica2:latest
-                    cd ..
+                    cd .. 
                 """
             }
         }
