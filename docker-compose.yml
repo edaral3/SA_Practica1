@@ -1,0 +1,10 @@
+version: "3"
+
+services: 
+    frontend:
+        container_name: frontend
+        restart: always
+        build: ./FRONTEND
+        command: npm start
+        ports:
+            - "80:3000"

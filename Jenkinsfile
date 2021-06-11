@@ -5,7 +5,10 @@ pipeline { //En este apartado se definen las instrucciones del pipeline
             steps{ //En este apartado se definen los comandos que se ejecutaran al ejecurtarse el job
                 bat """
                     cd FRONTEND
-                    docker build -t \"sapractica1:latest\" .    
+                    docker build -t \"sapractica2:latest\" . 
+                    sudo docker login -u edaral3 -p 123456789
+                    sudo docker tag sapractica2 sapractica2:latest
+                    sudo docker push sapractica2:latest
                     cd ..
                 """
             }
@@ -24,9 +27,7 @@ pipeline { //En este apartado se definen las instrucciones del pipeline
         }
         stage("deploy"){
             steps{
-                bat "docker stop sapractica1"
-                bat "docker rm sapractica1"
-                bat "docker run -d -p 3000:3000 --name sapractica1 -it sapractica1:latest"
+                bat "python fabric.py"
             }
         }
     }
