@@ -2,8 +2,6 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 
-const db = require('./models/index');
-
 const PORT = 4002;
 
 const createApp = () => {
@@ -19,21 +17,10 @@ const createApp = () => {
     return app;
 };
 
-const dbConnect = (url) => {
-    db.mongoose
-        .connect(url)
-        .catch(err => {
-            console.error("No se pudo conectar a la base de datos");
-            console.error(err);
-            process.exit();
-        });
-};
-
 const app = createApp();
 
 app.listen(PORT, () => {
-    dbConnect(db.url);
-    console.log(`El microsevico activo en el puerto ${PORT}`)
+    console.log(`El backend ${PORT}`)
 });
 
 module.exports = { createApp };
