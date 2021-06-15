@@ -10,7 +10,8 @@ pipeline { //En este apartado se definen las instrucciones del pipeline
                     docker tag frontend edaral3/frontend:latest
                     docker push edaral3/frontend:latest
                     cd .. 
-
+                """                
+                bat """
                     cd BACKEND
                     docker build -t backend .
                     docker login -u edaral3 -p 123456789
