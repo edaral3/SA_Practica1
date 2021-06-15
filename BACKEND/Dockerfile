@@ -1,8 +1,8 @@
 FROM node:14
 
-RUN mkdir -p /user_get
+RUN mkdir -p /back
 
-WORKDIR /user_get
+WORKDIR /back
 
 COPY ./ ./
 

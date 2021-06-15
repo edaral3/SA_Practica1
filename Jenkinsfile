@@ -5,11 +5,19 @@ pipeline { //En este apartado se definen las instrucciones del pipeline
             steps{ //En este apartado se definen los comandos que se ejecutaran al ejecurtarse el job
                 bat """
                     cd FRONTEND
-                    docker build -t sapractica2 .
+                    docker build -t frontend .
                     docker login -u edaral3 -p 123456789
-                    docker tag sapractica2 edaral3/sapractica2:latest
-                    docker push edaral3/sapractica2:latest
+                    docker tag frontend edaral3/frontend:latest
+                    docker push edaral3/frontend:latest
                     cd .. 
+
+                    cd BACKEND
+                    docker build -t backend .
+                    docker login -u edaral3 -p 123456789
+                    docker tag backend edaral3/backend:latest
+                    docker push edaral3/backend:latest
+                    cd .. 
+
                 """
             }
         }

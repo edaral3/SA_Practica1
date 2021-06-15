@@ -1,10 +1,18 @@
 version: "3"
 
 services: 
-    sapractica2:
-        container_name: sapractica2
+    frontend:
+        container_name: frontend
         restart: always
-        image: edaral3/sapractica2:latest
+        image: edaral3/frontend:latest
         command: npm start
         ports:
             - "80:3000"
+
+    backend:
+        container_name: backend
+        restart: always
+        image: edaral3/backend:latest
+        command: node index.js
+        ports:
+            - "4002:4002"
