@@ -9,5 +9,3 @@ COPY ./ ./
 EXPOSE 4002
 
 RUN npm install
-
-CMD ["node","index.js"]
